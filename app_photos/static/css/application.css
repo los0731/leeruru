@@ -137,7 +137,7 @@ a {
     z-index: 1;
     top: 0;
     background-color: white;
-    padding: 40px 0;
+    padding: 24px 0;
     margin-bottom: -78px; }
     .container-memories .header h1 {
       font-weight: 900;
@@ -166,8 +166,10 @@ a {
     .container-memories .btn-home:hover::after, .container-memories .btn-home:hover::before {
       background-color: black; }
   .container-memories .footer {
-    height: 120px;
     background-color: white;
-    transform: translateY(-44px); }
+    transform: translateY(-48px);
+    font-size: 24px;
+    text-align: center;
+    padding: 40px 0 16px 0; }
 
 /*# sourceMappingURL=application.css.map */

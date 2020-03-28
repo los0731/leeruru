@@ -188,7 +188,7 @@ a {
     z-index: 1;
     top: 0;
     background-color: $color;
-    padding: 40px 0;
+    padding: 24px 0;
     margin-bottom: -78px;
 
     h1 {
@@ -238,8 +238,10 @@ a {
   }
 
   .footer {
-    height: 120px;
     background-color: $color;
-    transform: translateY(-44px);
+    transform: translateY(-48px);
+    font-size: 24px;
+    text-align: center;
+    padding: 40px 0 16px 0;
   }
 }
