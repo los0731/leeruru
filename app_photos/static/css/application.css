@@ -8,12 +8,15 @@ body {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif; }
 
+a {
+  transition: 0.4s; }
+
 .container {
   width: 100%;
   margin-left: auto;
   margin-right: auto; }
 
-.header {
+.container-photos .header {
   position: fixed;
   z-index: 9;
   bottom: 0;
@@ -22,17 +25,17 @@ body {
   background-color: black;
   color: white; }
   @media (max-width: 767px) {
-    .header {
+    .container-photos .header {
       position: relative;
       bottom: unset;
       right: unset;
       margin-left: 2px;
       margin-right: 2px; } }
-  .header .title {
+  .container-photos .header .title {
     margin: 0;
     font-size: 20px;
     font-weight: 700; }
-  .header .caption {
+  .container-photos .header .caption {
     margin: 16px 0 0 0;
     padding-left: 2px;
     font-size: 13px;
@@ -40,14 +43,14 @@ body {
     font-weight: 500;
     word-spacing: -1.2px;
     letter-spacing: -0.2px; }
-  .header .date {
+  .container-photos .header .date {
     margin: 6px 0 0 0;
     font-size: 12px;
     padding-left: 2px; }
-  .header n {
+  .container-photos .header n {
     font-weight: 400;
     font-size: 108%; }
-  .header .btn-memories {
+  .container-photos .header .btn-memories {
     display: block;
     padding: 10px 16px;
     margin-top: 16px;
@@ -57,10 +60,9 @@ body {
     font-weight: 700;
     text-decoration: none;
     border: 1px solid #263238; }
-    .header .btn-memories:hover {
+    .container-photos .header .btn-memories:hover {
       background-color: #263238; }
-
-.pagenation {
+.container-photos .pagenation {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -73,14 +75,17 @@ body {
   font-weight: 900;
   background-color: black;
   box-shadow: 0 0 0 2px white; }
-  .pagenation,
-  .pagenation a {
+  @media (max-width: 767px) {
+    .container-photos .pagenation {
+      justify-content: flex-start; } }
+  .container-photos .pagenation,
+  .container-photos .pagenation a {
     width: 48px; }
     @media (max-width: 767px) {
-      .pagenation,
-      .pagenation a {
+      .container-photos .pagenation,
+      .container-photos .pagenation a {
         width: 40px; } }
-  .pagenation a {
+  .container-photos .pagenation a {
     color: white;
     text-decoration: none;
     height: calc(100vh / 8);
@@ -89,40 +94,78 @@ body {
     justify-content: center;
     align-items: center; }
     @media (max-width: 767px) {
-      .pagenation a {
-        font-size: 12px; } }
-  .pagenation a:hover {
+      .container-photos .pagenation a {
+        font-size: 12px;
+        height: calc(100vh / 9); } }
+  .container-photos .pagenation a:hover {
     background-color: #263238; }
-
-.list-photos {
+.container-photos .list-photos {
   list-style: none;
   padding: 1px;
   margin: 0;
   font-size: 0;
   width: calc(100vw - 40px); }
-  .list-photos .photo-item {
+  .container-photos .list-photos .photo-item {
     display: inline-block; }
-  .list-photos a {
+  .container-photos .list-photos a {
     position: relative;
     outline: none; }
-  .list-photos a:focus {
+  .container-photos .list-photos a:focus {
     z-index: 2; }
-    .list-photos a:focus img {
+    .container-photos .list-photos a:focus img {
       transform: scale(1.8);
       box-shadow: 0 16px 32px -2px rgba(20, 20, 60, 0.16);
       border-radius: 4px; }
-  .list-photos img {
+  .container-photos .list-photos img {
     display: inline;
     transition: 0.4s;
     transform: scale(1);
     border: 1px solid white;
     height: 40vh; }
     @media (max-width: 767px) {
-      .list-photos img {
-        height: 30vh; } }
+      .container-photos .list-photos img {
+        height: unset;
+        width: 100%; } }
 
-#main-nav,
-#conversation .nav.nav-secondary {
-  display: none; }
+.container-memories {
+  max-width: 640px;
+  padding: 0 24px; }
+  .container-memories .header {
+    position: relative;
+    z-index: 1;
+    top: 0;
+    background-color: white;
+    padding: 40px 0;
+    margin-bottom: -74px; }
+    .container-memories .header h1 {
+      font-weight: 900;
+      word-spacing: -4px; }
+  .container-memories .btn-wrap {
+    text-align: right; }
+  .container-memories .btn-home {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    height: 24px;
+    width: 24px; }
+    .container-memories .btn-home::after, .container-memories .btn-home::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 48%;
+      width: 24px;
+      height: 2px;
+      background-color: #b0bec5;
+      transition: 0.4s; }
+    .container-memories .btn-home::after {
+      transform: rotate(45deg); }
+    .container-memories .btn-home::before {
+      transform: rotate(-45deg); }
+    .container-memories .btn-home:hover::after, .container-memories .btn-home:hover::before {
+      background-color: black; }
+  .container-memories .footer {
+    height: 120px;
+    background-color: white;
+    transform: translateY(-40px); }
 
 /*# sourceMappingURL=application.css.map */
