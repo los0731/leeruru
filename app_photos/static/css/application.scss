@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+}
+
+.container {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+}
+
+a:focus img {
+  transform: scale(1.6);
+}
+
+img {
+  display: inline;
+  height: 400px;
+}
