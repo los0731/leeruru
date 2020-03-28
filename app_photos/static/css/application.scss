@@ -45,9 +45,11 @@ a {
     padding: 22px 24px 24px 23px;
     background-color: black;
     color: #eceff1;
-    animation: slideUp 2s ease 1s forwards;
 
-    bottom: -240px;
+    @media (min-width: 768px) {
+      animation: slideUp 2s ease 2s forwards;
+      bottom: -240px;
+    }
 
     @media (max-width: 767px) {
       position: relative;
