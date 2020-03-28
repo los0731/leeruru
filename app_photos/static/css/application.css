@@ -18,14 +18,22 @@ a {
 
 .container-photos {
   padding: 0 40px 0 0; }
+@keyframes slideUp {
+  from {
+    bottom: -240px; }
+  to {
+    bottom: 0; } }
   .container-photos .header {
     position: fixed;
+    min-width: 256px;
     z-index: 9;
     bottom: 0;
     right: 50px;
     padding: 22px 24px 24px 23px;
     background-color: black;
-    color: white; }
+    color: #eceff1;
+    animation: slideUp 2s ease 1s forwards;
+    bottom: -240px; }
     @media (max-width: 767px) {
       .container-photos .header {
         position: relative;
@@ -35,7 +43,8 @@ a {
         margin-right: 2px; } }
     .container-photos .header .title {
       margin: 0;
-      font-size: 20px;
+      color: white;
+      font-size: 22px;
       font-weight: 700; }
     .container-photos .header .caption {
       margin: 16px 0 0 0;
@@ -45,6 +54,9 @@ a {
       font-weight: 500;
       word-spacing: -1.2px;
       letter-spacing: -0.2px; }
+      @media (max-width: 767px) {
+        .container-photos .header .caption br {
+          display: none; } }
     .container-photos .header .date {
       margin: 6px 0 0 0;
       font-size: 12px;
@@ -55,14 +67,16 @@ a {
     .container-photos .header .btn-memories {
       display: block;
       padding: 10px 16px;
-      margin-top: 16px;
+      margin-top: 20px;
       text-align: center;
       color: white;
       font-size: 12px;
       font-weight: 700;
       text-decoration: none;
-      border: 1px solid #263238; }
+      border: 1px solid #263238;
+      color: #90a4ae; }
       .container-photos .header .btn-memories:hover {
+        color: white;
         background-color: #263238; }
   .container-photos .pagenation {
     position: fixed;
@@ -140,6 +154,7 @@ a {
     padding: 24px 0;
     margin-bottom: -78px; }
     .container-memories .header h1 {
+      font-size: 28px;
       font-weight: 900;
       word-spacing: -4px; }
   .container-memories .btn-wrap {
@@ -170,6 +185,15 @@ a {
     transform: translateY(-48px);
     font-size: 24px;
     text-align: center;
-    padding: 40px 0 16px 0; }
+    padding: 64px 0 16px 0; }
+    .container-memories .footer h2,
+    .container-memories .footer h6 {
+      margin: 0; }
+    .container-memories .footer h6 {
+      font-size: 12px;
+      color: #b0bec5;
+      line-height: 1.5; }
+    .container-memories .footer h2 {
+      line-height: 1; }
 
 /*# sourceMappingURL=application.css.map */

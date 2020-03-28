@@ -27,14 +27,27 @@ a {
 .container-photos {
   padding: 0 $outter-margin 0 0;
 
+  @keyframes slideUp {
+    from {
+      bottom: -240px;
+    }
+    to {
+      bottom: 0;
+    }
+  }
+
   .header {
     position: fixed;
+    min-width: 256px;
     z-index: 9;
     bottom: 0;
     right: 50px;
     padding: 22px 24px 24px 23px;
     background-color: black;
-    color: white;
+    color: #eceff1;
+    animation: slideUp 2s ease 1s forwards;
+
+    bottom: -240px;
 
     @media (max-width: 767px) {
       position: relative;
@@ -46,7 +59,8 @@ a {
 
     .title {
       margin: 0;
-      font-size: 20px;
+      color: white;
+      font-size: 22px;
       font-weight: 700;
     }
 
@@ -58,6 +72,12 @@ a {
       font-weight: 500;
       word-spacing: -1.2px;
       letter-spacing: -0.2px;
+
+      @media (max-width: 767px) {
+        br {
+          display: none;
+        }
+      }
     }
 
     .date {
@@ -74,15 +94,17 @@ a {
     .btn-memories {
       display: block;
       padding: 10px 16px;
-      margin-top: 16px;
+      margin-top: 20px;
       text-align: center;
       color: white;
       font-size: 12px;
       font-weight: 700;
       text-decoration: none;
       border: 1px solid #263238;
+      color: #90a4ae;
 
       &:hover {
+        color: white;
         background-color: #263238;
       }
     }
@@ -192,6 +214,7 @@ a {
     margin-bottom: -78px;
 
     h1 {
+      font-size: 28px;
       font-weight: 900;
       word-spacing: -4px;
     }
@@ -242,6 +265,21 @@ a {
     transform: translateY(-48px);
     font-size: 24px;
     text-align: center;
-    padding: 40px 0 16px 0;
+    padding: 64px 0 16px 0;
+
+    h2,
+    h6 {
+      margin: 0;
+    }
+
+    h6 {
+      font-size: 12px;
+      color: #b0bec5;
+      line-height: 1.5;
+    }
+
+    h2 {
+      line-height: 1;
+    }
   }
 }
