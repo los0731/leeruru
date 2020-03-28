@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import os
+import random
 
 # Create your views here.
 # ↓↓↓ 추가
@@ -16,6 +17,8 @@ list_imgs = os.listdir(imgs_path)
 for idx, val in enumerate(list_imgs):
     tag = '/static/imgs/{}'.format(val)
     list_imgs_src.append(tag)
+
+random.shuffle(list_imgs_src)
 
 page_1 = list_imgs_src[0:199]
 page_2 = list_imgs_src[200:399]
