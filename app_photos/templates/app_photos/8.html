@@ -1,17 +1,16 @@
 {% extends 'app_photos/base.html' %}
-
 <!--  -->
 {% block content %}
-
 <!--  -->
 {% load static %}
 
 <!--  -->
 {% for i in page_8 %}
-<a href="" onclick="return false;">
-  <img src="{{ i }}" alt="" />
-</a>
-
+<li class="photo-item">
+  <a href="" onclick="return false;">
+    <img src="{{ i }}" alt="" />
+  </a>
+</li>
 {% endfor %}
 
 <!--  -->
