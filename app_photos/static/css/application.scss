@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-$outter-margin: 16px;
+$outter-margin: 40px;
 
 body {
   padding: 0 $outter-margin 0 0;
@@ -12,14 +12,28 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .header {
   position: fixed;
   z-index: 9;
-  top: 0;
+  bottom: 0;
   right: 50px;
   padding: 22px 24px 24px 23px;
   background-color: black;
   color: white;
+
+  @media (max-width: 767px) {
+    position: relative;
+    bottom: unset;
+    right: unset;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
 
   .title {
     margin: 0;
@@ -47,24 +61,45 @@ body {
     font-weight: 400;
     font-size: 108%;
   }
+
+  .btn-memories {
+    display: block;
+    padding: 10px 16px;
+    margin-top: 16px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #263238;
+
+    &:hover {
+      background-color: #263238;
+    }
+  }
 }
 
 .pagenation {
   position: fixed;
-  z-index: 8;
-  font-weight: 900;
-  background-color: black;
-  top: 0;
-  right: 0;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 8;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  font-weight: 900;
+  background-color: black;
+  box-shadow: 0 0 0 2px white;
 
   &,
   a {
     width: 48px;
+
+    @media (max-width: 767px) {
+      width: $outter-margin;
+    }
   }
 
   a {
@@ -75,6 +110,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+    }
   }
 
   a:hover {
@@ -82,24 +121,12 @@ body {
   }
 }
 
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1px;
-}
-
 .list-photos {
   list-style: none;
-  padding: 0;
+  padding: 1px;
   margin: 0;
   font-size: 0;
   width: calc(100vw - #{$outter-margin});
-
-  @media (max-width: 767px) {
-    overflow-x: scroll;
-    overflow-y: visible;
-  }
 
   .photo-item {
     display: inline-block;

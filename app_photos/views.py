@@ -7,7 +7,7 @@ import os
 # 로컬을 위한 경로.
 imgs_path = '/Users/frank.io/Documents/workplace/django_4th/app_photos/static/imgs'
 # pythonanywhere용 절대 경로.
-imgs_path = '/home/leeruru/leeruru/app_photos/static/imgs'
+# imgs_path = '/home/leeruru/leeruru/app_photos/static/imgs'
 
 list_imgs_src = []
 list_imgs = os.listdir(imgs_path)
@@ -43,6 +43,10 @@ def photos_album(request):
     return render(request, 'app_photos/index.html', data)
 
 
+def page_1(request):
+    return render(request, 'app_photos/index.html', data)
+
+
 def page_2(request):
     return render(request, 'app_photos/2.html', data)
 
@@ -69,3 +73,7 @@ def page_7(request):
 
 def page_8(request):
     return render(request, 'app_photos/8.html', data)
+
+
+def page_memories(request):
+    return render(request, 'app_photos/memories.html', data)
