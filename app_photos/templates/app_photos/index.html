@@ -1,11 +1,27 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/application.css' %}" />
   </head>
   <body>
-    <h1>haha</h1>
+    <div class="container">
+      <header>
+        <h1>
+          <strong>
+            이루루 <br />
+            2005-2020
+          </strong>
+        </h1>
+      </header>
+      
+      {% for i in list_imgs_src %}
+        <img src="{{ i }}" alt="" />
+      {% endfor %}
+    </div>
   </body>
 </html>
