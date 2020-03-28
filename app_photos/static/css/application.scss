@@ -7,7 +7,7 @@
 $outter-margin: 40px;
 
 body {
-  padding: 0 $outter-margin 0 0;
+  padding: 0;
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -18,12 +18,15 @@ a {
 
 .container {
   width: 100%;
+
   margin-left: auto;
   margin-right: auto;
 }
 
 // photos
 .container-photos {
+  padding: 0 $outter-margin 0 0;
+
   .header {
     position: fixed;
     z-index: 9;
@@ -186,7 +189,7 @@ a {
     top: 0;
     background-color: $color;
     padding: 40px 0;
-    margin-bottom: -74px;
+    margin-bottom: -78px;
 
     h1 {
       font-weight: 900;
@@ -237,6 +240,6 @@ a {
   .footer {
     height: 120px;
     background-color: $color;
-    transform: translateY(-40px);
+    transform: translateY(-44px);
   }
 }

@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 body {
-  padding: 0 40px 0 0;
+  padding: 0;
   margin: 0;
   font-family: Helvetica, Arial, sans-serif; }
 
@@ -16,116 +16,118 @@ a {
   margin-left: auto;
   margin-right: auto; }
 
-.container-photos .header {
-  position: fixed;
-  z-index: 9;
-  bottom: 0;
-  right: 50px;
-  padding: 22px 24px 24px 23px;
-  background-color: black;
-  color: white; }
-  @media (max-width: 767px) {
-    .container-photos .header {
-      position: relative;
-      bottom: unset;
-      right: unset;
-      margin-left: 2px;
-      margin-right: 2px; } }
-  .container-photos .header .title {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 700; }
-  .container-photos .header .caption {
-    margin: 16px 0 0 0;
-    padding-left: 2px;
-    font-size: 13px;
-    line-height: 1.5;
-    font-weight: 500;
-    word-spacing: -1.2px;
-    letter-spacing: -0.2px; }
-  .container-photos .header .date {
-    margin: 6px 0 0 0;
-    font-size: 12px;
-    padding-left: 2px; }
-  .container-photos .header n {
-    font-weight: 400;
-    font-size: 108%; }
-  .container-photos .header .btn-memories {
-    display: block;
-    padding: 10px 16px;
-    margin-top: 16px;
-    text-align: center;
-    color: white;
-    font-size: 12px;
-    font-weight: 700;
-    text-decoration: none;
-    border: 1px solid #263238; }
-    .container-photos .header .btn-memories:hover {
-      background-color: #263238; }
-.container-photos .pagenation {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 8;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  font-weight: 900;
-  background-color: black;
-  box-shadow: 0 0 0 2px white; }
-  @media (max-width: 767px) {
-    .container-photos .pagenation {
-      justify-content: flex-start; } }
-  .container-photos .pagenation,
-  .container-photos .pagenation a {
-    width: 48px; }
+.container-photos {
+  padding: 0 40px 0 0; }
+  .container-photos .header {
+    position: fixed;
+    z-index: 9;
+    bottom: 0;
+    right: 50px;
+    padding: 22px 24px 24px 23px;
+    background-color: black;
+    color: white; }
     @media (max-width: 767px) {
-      .container-photos .pagenation,
-      .container-photos .pagenation a {
-        width: 40px; } }
-  .container-photos .pagenation a {
-    color: white;
-    text-decoration: none;
-    height: calc(100vh / 8);
-    padding: 16px 0;
+      .container-photos .header {
+        position: relative;
+        bottom: unset;
+        right: unset;
+        margin-left: 2px;
+        margin-right: 2px; } }
+    .container-photos .header .title {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700; }
+    .container-photos .header .caption {
+      margin: 16px 0 0 0;
+      padding-left: 2px;
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 500;
+      word-spacing: -1.2px;
+      letter-spacing: -0.2px; }
+    .container-photos .header .date {
+      margin: 6px 0 0 0;
+      font-size: 12px;
+      padding-left: 2px; }
+    .container-photos .header n {
+      font-weight: 400;
+      font-size: 108%; }
+    .container-photos .header .btn-memories {
+      display: block;
+      padding: 10px 16px;
+      margin-top: 16px;
+      text-align: center;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      border: 1px solid #263238; }
+      .container-photos .header .btn-memories:hover {
+        background-color: #263238; }
+  .container-photos .pagenation {
+    position: fixed;
     display: flex;
-    justify-content: center;
-    align-items: center; }
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 8;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    font-weight: 900;
+    background-color: black;
+    box-shadow: 0 0 0 2px white; }
     @media (max-width: 767px) {
-      .container-photos .pagenation a {
-        font-size: 12px;
-        height: calc(100vh / 9); } }
-  .container-photos .pagenation a:hover {
-    background-color: #263238; }
-.container-photos .list-photos {
-  list-style: none;
-  padding: 1px;
-  margin: 0;
-  font-size: 0;
-  width: calc(100vw - 40px); }
-  .container-photos .list-photos .photo-item {
-    display: inline-block; }
-  .container-photos .list-photos a {
-    position: relative;
-    outline: none; }
-  .container-photos .list-photos a:focus {
-    z-index: 2; }
-    .container-photos .list-photos a:focus img {
-      transform: scale(1.8);
-      box-shadow: 0 16px 32px -2px rgba(20, 20, 60, 0.16);
-      border-radius: 4px; }
-  .container-photos .list-photos img {
-    display: inline;
-    transition: 0.4s;
-    transform: scale(1);
-    border: 1px solid white;
-    height: 40vh; }
-    @media (max-width: 767px) {
-      .container-photos .list-photos img {
-        height: unset;
-        width: 100%; } }
+      .container-photos .pagenation {
+        justify-content: flex-start; } }
+    .container-photos .pagenation,
+    .container-photos .pagenation a {
+      width: 48px; }
+      @media (max-width: 767px) {
+        .container-photos .pagenation,
+        .container-photos .pagenation a {
+          width: 40px; } }
+    .container-photos .pagenation a {
+      color: white;
+      text-decoration: none;
+      height: calc(100vh / 8);
+      padding: 16px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      @media (max-width: 767px) {
+        .container-photos .pagenation a {
+          font-size: 12px;
+          height: calc(100vh / 9); } }
+    .container-photos .pagenation a:hover {
+      background-color: #263238; }
+  .container-photos .list-photos {
+    list-style: none;
+    padding: 1px;
+    margin: 0;
+    font-size: 0;
+    width: calc(100vw - 40px); }
+    .container-photos .list-photos .photo-item {
+      display: inline-block; }
+    .container-photos .list-photos a {
+      position: relative;
+      outline: none; }
+    .container-photos .list-photos a:focus {
+      z-index: 2; }
+      .container-photos .list-photos a:focus img {
+        transform: scale(1.8);
+        box-shadow: 0 16px 32px -2px rgba(20, 20, 60, 0.16);
+        border-radius: 4px; }
+    .container-photos .list-photos img {
+      display: inline;
+      transition: 0.4s;
+      transform: scale(1);
+      border: 1px solid white;
+      height: 40vh; }
+      @media (max-width: 767px) {
+        .container-photos .list-photos img {
+          height: unset;
+          width: 100%; } }
 
 .container-memories {
   max-width: 640px;
@@ -136,7 +138,7 @@ a {
     top: 0;
     background-color: white;
     padding: 40px 0;
-    margin-bottom: -74px; }
+    margin-bottom: -78px; }
     .container-memories .header h1 {
       font-weight: 900;
       word-spacing: -4px; }
@@ -166,6 +168,6 @@ a {
   .container-memories .footer {
     height: 120px;
     background-color: white;
-    transform: translateY(-40px); }
+    transform: translateY(-44px); }
 
 /*# sourceMappingURL=application.css.map */
